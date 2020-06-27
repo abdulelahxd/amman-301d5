@@ -38,6 +38,8 @@ function displayPics(){
   // console.log(rando);
   // TODO: In a sentence or two, explain why the previous line of code threw an error when we changed the constiable declaration from `const to `const`.
   // PUT YOUR RESPONSE IN THIS COMMENT
+
+  // we can't access let because it was in code block and we tried to access it from outside the block. that's won't work
   console.log(viewed);
 
   for (let i = 0; i < 3; i++){
@@ -71,7 +73,7 @@ function handleClick(event) {
 }
 
 function showList() {
-  for(const i = 0; i < allProducts.length; i++) {
+  for(let i = 0; i < allProducts.length; i++) {
     const liEl = document.createElement('li');
     // liEl.textContent = allProducts[i].name + ' has ' + allProducts[i].votes + ' votes in ' + allProducts[i].views + ' views';
     liEl.textContent = `${allProducts[i].name} has ${allProducts[i].votes} votes in ${allProducts[i].views} views`;
